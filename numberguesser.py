@@ -31,6 +31,7 @@ Guess the number correctly within those guesses and you win!
 For each wrong guess, you lost a turn, if those turns hit 0, you lose :C
 """)
 
+
 while correct is False and turns > 0:
 
     user_guess = int(input("What is your guess? > "))
@@ -54,3 +55,10 @@ while correct is False and turns > 0:
     else:
         print("Error")
         break
+
+print(f"""
+
+The number was {number},
+Good luck next time {name}!
+
+""")
