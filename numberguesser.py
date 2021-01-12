@@ -1,8 +1,13 @@
 from random import *
+from functions import *
 
 turns = 10
 correct = False
 number = randint(1, 1000)
+
+
+pw()
+
 
 print("""
 Welcome to Higher or Lower!
@@ -13,22 +18,13 @@ before you run out of turns
 After each guess, you are given
 either \"Higher\" or \"Lower\" 
 to guide you in the right direction
-
-Use the 'help' command to see a list
-of actions
 """)
 
-name = input("What is your name? > ")
 
 print(f"""
-
-Welcome to Higher or Lower {name}!
-
-In this game you have {turns} guesses :D
-
+Lets see your skill {username}!
+You have {turns} guesses available
 Guess the number correctly within those guesses and you win!
-
-For each wrong guess, you lost a turn, if those turns hit 0, you lose :C
 """)
 
 
@@ -42,10 +38,10 @@ while correct is False and turns > 0:
         break
     elif user_guess > number:
         turns = turns - 1
-        print(f"Too high. You have {turns} guesses left :| ")
+        print(f"Too high. You have {turns} guesses left ")
     elif user_guess < number:
         turns = turns - 1
-        print(f"Too low. You have {turns} guesses left :| ")
+        print(f"Too low. You have {turns} guesses left ")
     else:
         print("Error")
         break
@@ -53,6 +49,6 @@ while correct is False and turns > 0:
 print(f"""
 
 The number was {number},
-Good luck next time {name}!
+Better luck next time {username}!
 
 """)
