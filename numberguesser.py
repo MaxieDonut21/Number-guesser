@@ -40,18 +40,12 @@ while correct is False and turns > 0:
         print("Wow! You're amazing! How did you get the answer so quickly?")
         correct = True
         break
-    elif user_guess > number + 10:
-        turns = turns - 1
-        print(f"Too high! You have {turns} guesses left :| ")
-    elif user_guess < number - 10:
-        turns = turns - 1
-        print(f"Too low! You have {turns} guesses left :| ")
     elif user_guess > number:
         turns = turns - 1
-        print(f"Close, still a little high. You have {turns} guesses left :| ")
+        print(f"Too high. You have {turns} guesses left :| ")
     elif user_guess < number:
         turns = turns - 1
-        print(f"Close, still a little high. You have {turns} guesses left :| ")
+        print(f"Too low. You have {turns} guesses left :| ")
     else:
         print("Error")
         break
